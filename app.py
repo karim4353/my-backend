@@ -34,8 +34,7 @@
 
 #     return jsonify({"status": "ok", "message": "Device info received"})
 
-# if __name__ == '__main__':
-#     app.run(host='0.0.0.0', port=5000)
+
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import os
@@ -107,5 +106,8 @@ def check_app():
     print(f"Facebook Installed: {device.facebook_installed}")
 
     return jsonify({"message": "Device info received", "status": "ok"})
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+
 
 
